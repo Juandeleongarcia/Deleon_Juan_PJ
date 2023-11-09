@@ -1,0 +1,18 @@
+import random 
+numero_secreto = random.randint(0, 100)
+while True:
+    intento = input("Adivina el número (0-100): ")
+    if not intento.isdigit():
+        print("Por favor, ingresa un número válido.")
+        continue
+
+    intento = int(intento)
+    if intento < 0 or intento > 100:
+        print("El número debe estar entre 0 y 100.")
+    elif intento < numero_secreto:
+        print("No, el número es mayor.")
+    elif intento > numero_secreto:
+        print("No, el número es menor.")
+    else:
+        print("Correcto, ese es el numero secreto:", numero_secreto)
+        break
